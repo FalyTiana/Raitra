@@ -1,3 +1,4 @@
+import applyThemeClass from "@/utils/applyThemeClass";
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState ={
@@ -19,11 +20,6 @@ const themeSlice = createSlice({
         }
     }
 })
-
-const applyThemeClass = (theme:string) => {
-    document.body.classList.remove("light-mode", "dark-mode");
-    document.body.classList.add(`${theme}-mode`);
-};
 
 export const { setTheme, toggleTheme } = themeSlice.actions;
 export default themeSlice.reducer;

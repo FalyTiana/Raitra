@@ -1,8 +1,22 @@
+import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { toggleTheme } from "@/redux/slices/themeSlice";
 
-function index() {
+function Index() {
+  const dispatch = useDispatch();
+
+  const toogleTheme = () => {
+    dispatch(toggleTheme());
+  };
+
   return (
-    <div>index</div>
-  )
+    <div>
+      <Button variant="outline" size="icon" onClick={toogleTheme}>
+        <ChevronRight />
+      </Button>
+    </div>
+  );
 }
 
-export default index
+export default Index;
