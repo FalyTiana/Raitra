@@ -55,3 +55,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 export { Button, buttonVariants }
+
+
+// outline:
+// "border border-solid  border-foreground bg-background shadow-sm hover:border-none hover:bg-primary hover:text-primary-foreground ",
+// icon: "p-2",
